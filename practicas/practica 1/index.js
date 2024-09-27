@@ -188,13 +188,13 @@ document.querySelector("#botonIgual").addEventListener('click', function() {
     try {
       if (entradaActual !== '') {
         const resultado = eval(entradaActual);
-        document.getElementById('pantalla').innerHTML = resultado;
+        document.querySelector('pantalla').innerHTML = resultado;
       } else {
         console.log('No hay nada para calcular');
       }
     } catch (error) {
       console.log('Error en l\'operació:', error);
-      document.getElementById('pantalla').textContent = 'Error';
+      document.querySelector('pantalla').textContent = 'Error';
     }
   });  
   
