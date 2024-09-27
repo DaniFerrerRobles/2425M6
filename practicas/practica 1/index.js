@@ -198,8 +198,6 @@ document.querySelector("#botonIgual").addEventListener('click', function() {
     }
   });  
   
-  
-  ;
 
 
 

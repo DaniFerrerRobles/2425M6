@@ -52,6 +52,13 @@ document.querySelector("#respuesta1").addEventListener("click", function(){
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
     }
+
+    try {
+        if ("click" > 1) {
+            console.log("ERROR")
+        }
+      } catch (error) {
+      }
 })
 
 document.querySelector("#respuesta2").addEventListener("click", function(){
@@ -63,6 +70,13 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
     }
+
+    try {
+        if ("click" > 1) {
+            console.log("ERROR")
+        }
+      } catch (error) {
+      }
 })
 
 document.querySelector("#respuesta3").addEventListener("click", function(){
@@ -74,6 +88,13 @@ document.querySelector("#respuesta3").addEventListener("click", function(){
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
     }
+
+    try {
+        if ("click" > 1) {
+            console.log("ERROR")
+        }
+      } catch (error) {
+      }
 })
 
 document.querySelector("#respuesta4").addEventListener("click", function(){
@@ -85,6 +106,13 @@ document.querySelector("#respuesta4").addEventListener("click", function(){
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
     }
+
+    try {
+        if ("click" > 1) {
+            console.log("ERROR")
+        }
+      } catch (error) {
+      }
 })
 
 document.querySelector("#btnSiguiente").addEventListener("click", function(){
@@ -107,6 +135,13 @@ document.querySelector("#btnSiguiente").addEventListener("click", function(){
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
     }
+
+    try {
+        if ("click" > 1) {
+            console.log("ERROR")
+        }
+      } catch (error) {
+      }
 })
 
 document.querySelector("#respuesta2").addEventListener("click", function(){
@@ -118,6 +153,13 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
         else{
             console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
         }
+
+        try {
+            if ("click" > 1) {
+                console.log("ERROR")
+            }
+          } catch (error) {
+          }
     })
 
     document.querySelector("#respuesta3").addEventListener("click", function(){
@@ -129,6 +171,13 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
         else{
             console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
         }
+        try {
+            if ("click" > 1) {
+                console.log("ERROR")
+            }
+          } catch (error) {
+          }
+
     })
 
     document.querySelector("#respuesta4").addEventListener("click", function(){
@@ -140,9 +189,13 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
         else{
             console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
         }
+
+        try {
+            if ("click" > 1) {
+                console.log("ERROR")
+            }
+          } catch (error) {
+          }
+        }); 
+
     })
-
-    
-
-
-})
