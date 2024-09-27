@@ -44,7 +44,7 @@ document.querySelector("#respuesta3").innerHTML = preguntaAleatoria.posiblesResp
 document.querySelector("#respuesta4").innerHTML = preguntaAleatoria.posiblesRespuestas[3]
 
 document.querySelector("#respuesta1").addEventListener("click", function(){
-    console.clear()
+    console.clear();
 
     if (preguntaAleatoria.posiblesRespuestas[0] == preguntaAleatoria.respuestaCorrecta){
         console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
