@@ -171,7 +171,7 @@ document.querySelector("#botonMenos").addEventListener("click", function(){
 document.querySelector("#botonBorrar").addEventListener("click", function(){
     entradaActual = ' '
 
-    document.querySelector("#pantalla").innerHTML = " 0 "
+    document.querySelector("#pantalla").innerHTML = " 0 ";
 })
 
 
