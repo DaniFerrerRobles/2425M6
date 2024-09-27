@@ -134,11 +134,11 @@ document.querySelector("#numero9").addEventListener("click", function(){
     document.querySelector("#pantalla").innerHTML = entradaActual
 })
 
-/*document.querySelector("#boton+").addEventListener("click", function(){
+/*document.querySelector("#botonAdd").addEventListener("click", function(){
     console.log("+")
 })*/
 
-// document.querySelector("#boton+").addEventListener("click", function(){
+// document.querySelector("#botonAdd").addEventListener("click", function(){
 //     document.querySelector("#pantalla").innerHTML = " + "
 // })
 
@@ -147,11 +147,11 @@ document.querySelector("#botonAdd").addEventListener("click", function(){
     document.querySelector("#pantalla").innerHTML = entradaActual
 })
 
-/*document.querySelector("#boton-").addEventListener("click", function(){
+/*document.querySelector("#botonMenos").addEventListener("click", function(){
     console.log("-")
 })*/
 
-// document.querySelector("#boton-").addEventListener("click", function(){
+// document.querySelector("#botonMenos").addEventListener("click", function(){
 //     document.querySelector("#pantalla").innerHTML = " - "
 // })
 
@@ -160,11 +160,11 @@ document.querySelector("#botonMenos").addEventListener("click", function(){
     document.querySelector("#pantalla").innerHTML = entradaActual
 })
 
-/*document.querySelector("#boton=").addEventListener("click", function(){
+/*document.querySelector("#botonIgual").addEventListener("click", function(){
     console.log("=")
 })*/
 
-// document.querySelector("#boton=").addEventListener("click", function(){
+// document.querySelector("#botonIgual").addEventListener("click", function(){
 //     document.querySelector("#pantalla").innerHTML = " = "
 // })
 
@@ -181,7 +181,25 @@ document.querySelector("#botonIgual").addEventListener('click', function() {
     const resultado = eval(entradaActual);
     console.log("Resultado = ", resultado);
     document.querySelector("#pantalla").innerHTML = resultado;
-  });
+  })
+  
+
+  document.querySelector('#botonIgual').addEventListener('click', function() {
+    try {
+      if (entradaActual !== '') {
+        const resultado = eval(entradaActual);
+        document.getElementById('pantalla').innerHTML = resultado;
+      } else {
+        console.log('No hay nada para calcular');
+      }
+    } catch (error) {
+      console.log('Error en l\'operació:', error);
+      document.getElementById('pantalla').textContent = 'Error';
+    }
+  });  
+  
+  
+  ;
 
 
 
