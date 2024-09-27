@@ -157,7 +157,7 @@ document.querySelector("#botonAdd").addEventListener("click", function(){
 
 document.querySelector("#botonMenos").addEventListener("click", function(){
     entradaActual += "-"
-    document.querySelector("#pantalla").innerHTML = entradaActual
+    document.querySelector("#pantalla").innerHTML = entradaActual;
 })
 
 /*document.querySelector("#botonIgual").addEventListener("click", function(){
