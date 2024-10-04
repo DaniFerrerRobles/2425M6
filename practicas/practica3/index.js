@@ -71,7 +71,6 @@ for (let i = 0; i < respuestas.length; i++) {
    
               }
               else{
-
                   posicionActual=posicionActual - 3
    
                   if(posicionActual<1){
