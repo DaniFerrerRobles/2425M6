@@ -25,12 +25,28 @@ console.log("FUNCIONA!!!")
         console.log(" ", agrupado)        
     }
 
-    document.querySelector("#btnCrearFicha").addEventListener("click", function(){
-        agruparCodigo(atributo1, atributo2, atributo3)
+    document.querySelector("#btnCrearFicha").addEventListener("click", function(event){
+        event.preventDefault()
+
+        console.log("DENTRO")
+        agruparCodigo(atributo1, atributo2, atributo3)         
+
+        let inputNombre = document.querySelector(".inputNombre").value
+        document.querySelector("#nombre").innerHTML += inputNombre
+
+        let inputPrimerApellido = document.querySelector(".inputPrimerApellido").value
+        document.querySelector(" #nombre").innerHTML +=' ' + inputPrimerApellido
+
+
+        let inputSegundoApellido = document.querySelector(".inputSegundoApellido").value
+        document.querySelector(" #nombre").innerHTML += ' ' +  inputSegundoApellido
+
+
+        let inputDni = document.querySelector(".inputDni").value
+        document.querySelector("#dni").innerHTML = inputDni
+
+
+         let inputUrlImg = document.querySelector(".inputUrlImg").value
+         document.querySelector("#imagen").src = inputUrlImg
+
     })
-
-    document.querySelector("#nombre").innerHTML = "Dani Ferrer Robles"
-
-    document.querySelector("#dni").innerHTML = "45456123M"
-
-    document.querySelector("#imagen").innerHTML = '<img src="https://www.fedpc.org/wp-content/uploads/WhatsApp-Image-2023-08-03-at-20.29.26-1.jpeg" class="card-img-top" alt="imgDani"></img>'

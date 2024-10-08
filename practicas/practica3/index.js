@@ -30,9 +30,9 @@ const juego=[
 
 
 
- posicionActual = 1
- aciertos = 0
- errores = 0
+ let posicionActual = 1
+ let aciertos = 0
+ let errores = 0
 
 console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Errores: ", errores)
 
