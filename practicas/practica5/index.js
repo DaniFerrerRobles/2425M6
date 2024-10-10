@@ -6,7 +6,7 @@ console.log("FUNCIONA")
         console.log("DENTRO")
         
         let inputNombre = document.querySelector(".inputNombre").value
-        document.querySelector("#nombre").innerHTML += inputNombre
+        document.querySelector("#nombre").innerHTML = inputNombre
 
         let inputPrimerApellido = document.querySelector(".inputPrimerApellido").value
         document.querySelector(" #nombre").innerHTML +=' ' + inputPrimerApellido
