@@ -32,7 +32,7 @@ console.log("FUNCIONA!!!")
         agruparCodigo(atributo1, atributo2, atributo3)         
 
         let inputNombre = document.querySelector(".inputNombre").value
-        document.querySelector("#nombre").innerHTML += inputNombre
+        document.querySelector("#nombre").innerHTML = inputNombre
 
         let inputPrimerApellido = document.querySelector(".inputPrimerApellido").value
         document.querySelector(" #nombre").innerHTML +=' ' + inputPrimerApellido
