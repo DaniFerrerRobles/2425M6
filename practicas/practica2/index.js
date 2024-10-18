@@ -33,8 +33,7 @@ for (let i = 0; i < juego.length; i++) {
 console.log("El array es: ", juego[i])
 }
 
-
-const preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
+let preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
 
 document.querySelector("#btnPregunta").innerHTML = preguntaAleatoria.pregunta
 
@@ -47,20 +46,18 @@ document.querySelector("#respuesta1").addEventListener("click", function(){
     console.clear();
 
     if (preguntaAleatoria.posiblesRespuestas[0] == preguntaAleatoria.respuestaCorrecta){
-        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
+        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
+        document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        let resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoIncorrecto");
+        resultado.classList.add("resultadoCorrecto");
     }
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-    }
-
-    document.getElementById("result").style.display = "block";
-
-    document.getElementById("result").style.display = "none";
-
-    if (resultDiv.style.display === "none") {
-        resultDiv.style.display = "block";
-    } else {
-        resultDiv.style.display = "none";
+        document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoCorrecto")
+        resultado.classList.add("resultadoIncorrecto");
     }
 
     try {
@@ -75,20 +72,18 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
     console.clear()
 
     if (preguntaAleatoria.posiblesRespuestas[1] == preguntaAleatoria.respuestaCorrecta){
-        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
+        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
+        document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoIncorrecto");
+        resultado.classList.add("resultadoCorrecto");
     }
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-    }
-
-    document.getElementById("result").style.display = "block";
-
-    document.getElementById("result").style.display = "none";
-
-    if (resultDiv.style.display === "none") {
-        resultDiv.style.display = "block";
-    } else {
-        resultDiv.style.display = "none";
+        document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoCorrecto")
+        resultado.classList.add("resultadoIncorrecto");
     }
 
     try {
@@ -103,20 +98,18 @@ document.querySelector("#respuesta3").addEventListener("click", function(){
     console.clear()
 
     if (preguntaAleatoria.posiblesRespuestas[2] == preguntaAleatoria.respuestaCorrecta){
-        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
+        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
+        document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoIncorrecto");
+        resultado.classList.add("resultadoCorrecto");
     }
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-    }
-
-    document.getElementById("result").style.display = "block";
-
-    document.getElementById("result").style.display = "none";
-
-    if (resultDiv.style.display === "none") {
-        resultDiv.style.display = "block";
-    } else {
-        resultDiv.style.display = "none";
+        document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoCorrecto")
+        resultado.classList.add("resultadoIncorrecto");
     }
 
     try {
@@ -131,20 +124,18 @@ document.querySelector("#respuesta4").addEventListener("click", function(){
     console.clear()
 
     if (preguntaAleatoria.posiblesRespuestas[3] == preguntaAleatoria.respuestaCorrecta){
-        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
+        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
+        document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoIncorrecto");
+        resultado.classList.add("resultadoCorrecto");
     }
     else{
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-    }
-
-    document.getElementById("result").style.display = "block";
-
-    document.getElementById("result").style.display = "none";
-
-    if (resultDiv.style.display === "none") {
-        resultDiv.style.display = "block";
-    } else {
-        resultDiv.style.display = "none";
+        document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
+        resultado = document.querySelector("#result")
+        resultado.classList.remove("resultadoCorrecto")
+        resultado.classList.add("resultadoIncorrecto");
     }
 
     try {
@@ -157,7 +148,7 @@ document.querySelector("#respuesta4").addEventListener("click", function(){
 
 document.querySelector("#btnSiguiente").addEventListener("click", function(){
 
-    const preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
+     preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
 
     document.querySelector("#btnPregunta").innerHTML = preguntaAleatoria.pregunta
 
@@ -165,119 +156,4 @@ document.querySelector("#btnSiguiente").addEventListener("click", function(){
     document.querySelector("#respuesta2").innerHTML = preguntaAleatoria.posiblesRespuestas[1]
     document.querySelector("#respuesta3").innerHTML = preguntaAleatoria.posiblesRespuestas[2]
     document.querySelector("#respuesta4").innerHTML = preguntaAleatoria.posiblesRespuestas[3]
-
-   document.querySelector("#respuesta1").addEventListener("click", function(){
-    console.clear()
-
-    if (preguntaAleatoria.posiblesRespuestas[0] == preguntaAleatoria.respuestaCorrecta){
-        console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
-    }
-    else{
-        console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-    }
-
-    document.getElementById("result").style.display = "block";
-
-    document.getElementById("result").style.display = "none";
-
-    if (resultDiv.style.display === "none") {
-        resultDiv.style.display = "block";
-    } else {
-        resultDiv.style.display = "none";
-    }
-
-    try {
-        if ("click" > 1) {
-            console.log("ERROR")
-        }
-      } catch (error) {
-      }
-})
-
-document.querySelector("#respuesta2").addEventListener("click", function(){
-    console.clear()
-
-        if (preguntaAleatoria.posiblesRespuestas[1] == preguntaAleatoria.respuestaCorrecta){
-            console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
-        }
-        else{
-            console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-        }
-
-
-        document.getElementById("result").style.display = "block";
-
-        document.getElementById("result").style.display = "none";
-
-        if (resultDiv.style.display === "none") {
-            resultDiv.style.display = "block";
-        } else {
-            resultDiv.style.display = "none";
-        }
-
-        try {
-            if ("click" > 1) {
-                console.log("ERROR")
-            }
-          } catch (error) {
-          }
-    })
-
-    document.querySelector("#respuesta3").addEventListener("click", function(){
-        console.clear()
-
-        if (preguntaAleatoria.posiblesRespuestas[2] == preguntaAleatoria.respuestaCorrecta){
-            console.log("CORRECTO!!! La respuesta era ", preguntaAleatoria.respuestaCorrecta)    
-        }
-        else{
-            console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-        }
-
-        document.getElementById("result").style.display = "block";
-
-        document.getElementById("result").style.display = "none";
-
-        if (resultDiv.style.display === "none") {
-            resultDiv.style.display = "block";
-        } else {
-            resultDiv.style.display = "none";
-        }
-
-        try {
-            if ("click" > 1) {
-                console.log("ERROR")
-            }
-          } catch (error) {
-          }
-
-    })
-
-    document.querySelector("#respuesta4").addEventListener("click", function(){
-        console.clear()
-
-        if (preguntaAleatoria.posiblesRespuestas[3] == preguntaAleatoria.respuestaCorrecta){
-            console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)    
-        }
-        else{
-            console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
-        }
-
-        document.getElementById("result").style.display = "block";
-
-        document.getElementById("result").style.display = "none";
-
-        if (resultDiv.style.display === "none") {
-            resultDiv.style.display = "block";
-        } else {
-            resultDiv.style.display = "none";
-        }
-
-        try {
-            if ("click" > 1) {
-                console.log("ERROR")
-            }
-          } catch (error) {
-          }
-        }); 
-
     })
