@@ -27,12 +27,10 @@ const juego=[
         respuestaCorrecta:"2010"
     }
 ]
-
-
-
- let posicionActual = 1
+ let posicionActual = 0
  let aciertos = 0
  let errores = 0
+
 
 console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Errores: ", errores)
 
@@ -58,9 +56,18 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                  aciertos = aciertos + 1 
 
-                // posicionActual = document.querySelector(".div")
+                 posicionActual = document.querySelector(".div")
 
                  posicionActual.classList.add("div-point")
+
+                document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+
+                let resultado = document.querySelector("#resultado");
+
+                resultado.classList.remove("resultadoIncorrecto");
+
+                resultado.classList.add("resultadoCorrecto");
+
                  
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
@@ -83,6 +90,14 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
              posicionActual = document.querySelector(".div")
 
              posicionActual.classList.remove("div-point")
+
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+
+              resultado = document.querySelector("#resultado");
+
+              resultado.classList.remove("resultadoCorrecto")
+
+             resultado.classList.add("resultadoIncorrecto");
          }
 
          console.log("Aciertos ", aciertos)
@@ -103,7 +118,15 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
 
                      posicion = document.querySelector(".div")
 
-                     posicion = posicion.classList.add("div-point")                     
+                     posicion = posicion.classList.add("div-point")    
+                     
+                     document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+
+                      resultado = document.querySelector("#resultado");
+
+                      resultado.classList.remove("resultadoIncorrecto");
+     
+                     resultado.classList.add("resultadoCorrecto");
                      
                      if (posicionActual == 20) {
                         console.log("Has llegado a la posición ", posicionActual)
@@ -126,6 +149,14 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
              posicion = document.querySelector(".div")
 
              posicion = posicion.classList.remove("div-point")
+
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+
+             resultado = document.querySelector("#resultado");
+
+             resultado.classList.remove("resultadoCorrecto")
+
+             resultado.classList.add("resultadoIncorrecto");
          }
 
          console.log("Aciertos ", aciertos)
@@ -147,6 +178,14 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                  posicion = document.querySelector(".div")
 
                  posicion = posicion.classList.add("div-point")
+
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+
+                  resultado = document.querySelector("#resultado");
+
+                  resultado.classList.remove("resultadoIncorrecto");
+ 
+                 resultado.classList.add("resultadoCorrecto");
                  
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
@@ -168,6 +207,14 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
              posicion = document.querySelector(".div")
 
              posicion = posicion.classList.remove("div-point")
+
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+
+              resultado = document.querySelector("#resultado");
+
+              resultado.classList.remove("resultadoCorrecto")
+
+             resultado.classList.add("resultadoIncorrecto");
          }
 
          console.log("Aciertos ", aciertos)
@@ -189,6 +236,14 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
 
                  posicion = posicion.classList.add("div-point")
 
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+
+                  resultado = document.querySelector("#resultado");
+
+                  resultado.classList.remove("resultadoIncorrecto");
+ 
+                 resultado.classList.add("resultadoCorrecto");
+
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
                     console.log("Aciertos Totales: ", aciertos)
@@ -209,6 +264,13 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
              posicion = document.querySelector(".div")
 
              posicion = posicion.classList.remove("div-point")
+
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+
+             resultado = document.querySelector("#resultado");
+             resultado.classList.remove("resultadoCorrecto")
+
+             resultado.classList.add("resultadoIncorrecto");
          }
 
          console.log("Aciertos ", aciertos)
