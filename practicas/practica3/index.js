@@ -56,11 +56,8 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                  aciertos = aciertos + 1 
 
-                 posicionActual = document.querySelector(".div")
 
-                 posicionActual.classList.add("div-point")
-
-                document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+                document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
 
                 let resultado = document.querySelector("#resultado");
 
@@ -87,11 +84,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual)
 
-             posicionActual = document.querySelector(".div")
-
-             posicionActual.classList.remove("div-point")
-
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+             document.querySelector("#resultado").innerHTML = "Respuesta incorrecta!!! Nueva posición: " + posicionActual;
 
               resultado = document.querySelector("#resultado");
 
@@ -114,13 +107,9 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
 
                  console.log("Respuesta correcta!!! Nueva posición: ", posicionActual )    
                 
-                     aciertos = aciertos + 1
-
-                     posicion = document.querySelector(".div")
-
-                     posicion = posicion.classList.add("div-point")    
+                     aciertos = aciertos + 1  
                      
-                     document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+                     document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
 
                       resultado = document.querySelector("#resultado");
 
@@ -146,11 +135,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
 
-             posicion = document.querySelector(".div")
-
-             posicion = posicion.classList.remove("div-point")
-
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!! Nueva posición: " + posicionActual;
 
              resultado = document.querySelector("#resultado");
 
@@ -175,11 +160,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                  aciertos = aciertos + 1    
 
-                 posicion = document.querySelector(".div")
-
-                 posicion = posicion.classList.add("div-point")
-
-                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
 
                   resultado = document.querySelector("#resultado");
 
@@ -204,11 +185,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
 
-             posicion = document.querySelector(".div")
-
-             posicion = posicion.classList.remove("div-point")
-
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!! Nueva posición: " + posicionActual;
 
               resultado = document.querySelector("#resultado");
 
@@ -232,11 +209,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                  aciertos = aciertos + 1
 
-                 posicion = document.querySelector(".div")
-
-                 posicion = posicion.classList.add("div-point")
-
-                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!!";
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
 
                   resultado = document.querySelector("#resultado");
 
@@ -261,11 +234,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
 
-             posicion = document.querySelector(".div")
-
-             posicion = posicion.classList.remove("div-point")
-
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!!";
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!! Nueva posición: " + posicionActual;
 
              resultado = document.querySelector("#resultado");
              resultado.classList.remove("resultadoCorrecto")
