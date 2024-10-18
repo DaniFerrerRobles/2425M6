@@ -34,11 +34,11 @@ const juego=[
  let aciertos = 0
  let errores = 0
 
-console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Errores: ", errores)
+console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Errores: ", errores)
 
 
 
- const preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
+ let preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
 
  document.querySelector("#pregunta").innerHTML = preguntaAleatoria.pregunta
 
@@ -47,9 +47,9 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
  document.querySelector("#respuesta3").innerHTML = preguntaAleatoria.posiblesRespuestas[2]
  document.querySelector("#respuesta4").innerHTML = preguntaAleatoria.posiblesRespuestas[3]
 
- function mouJugador(){
+
  document.querySelector("#respuesta1").addEventListener("click", function(){
-     console.clear();
+     console.log("pregunta aleatoria " ,preguntaAleatoria)
 
          if (preguntaAleatoria.posiblesRespuestas[0] == preguntaAleatoria.respuestaCorrecta){
                  posicionActual = posicionActual + 1
@@ -58,9 +58,9 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
                 
                  aciertos = aciertos + 1 
 
-                 posicion = document.querySelector(".div")
+                // posicionActual = document.querySelector(".div")
 
-                 posicion.classList.add("div-point")
+                 posicionActual.classList.add("div-point")
                  
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
@@ -80,15 +80,15 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual)
 
-             posicion = document.querySelector(".div")
+             posicionActual = document.querySelector(".div")
 
-             posicion.classList.remove("div-point")
+             posicionActual.classList.remove("div-point")
          }
 
          console.log("Aciertos ", aciertos)
          console.log("Errores ", errores)
 
- },
+ }),
 
  document.querySelector("#respuesta2").addEventListener("click", function(){
      console.clear();
@@ -103,7 +103,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
                      posicion = document.querySelector(".div")
 
-                     posicion.classList.add("div-point")                     
+                     posicion = posicion.classList.add("div-point")                     
                      
                      if (posicionActual == 20) {
                         console.log("Has llegado a la posición ", posicionActual)
@@ -125,7 +125,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
              posicion = document.querySelector(".div")
 
-             posicion.classList.remove("div-point")
+             posicion = posicion.classList.remove("div-point")
          }
 
          console.log("Aciertos ", aciertos)
@@ -146,7 +146,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
                  posicion = document.querySelector(".div")
 
-                 posicion.classList.add("div-point")
+                 posicion = posicion.classList.add("div-point")
                  
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
@@ -167,7 +167,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
              posicion = document.querySelector(".div")
 
-             posicion.classList.remove("div-point")
+             posicion = posicion.classList.remove("div-point")
          }
 
          console.log("Aciertos ", aciertos)
@@ -187,7 +187,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
                  posicion = document.querySelector(".div")
 
-                 posicion.classList.add("div-point")
+                 posicion = posicion.classList.add("div-point")
 
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
@@ -208,7 +208,7 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
              posicion = document.querySelector(".div")
 
-             posicion.classList.remove("div-point")
+             posicion = posicion.classList.remove("div-point")
          }
 
          console.log("Aciertos ", aciertos)
@@ -216,184 +216,16 @@ console.log("Posición actual: ", posicionActual, "Aciertos: ", aciertos, "Error
 
  }),
 
-
  document.querySelector("#btnSiguiente").addEventListener("click", function(){
 
-     const preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
+      preguntaAleatoria = juego[Math.floor(Math.random() * juego.length)]
 
-     document.querySelector("#pregunta").innerHTML = preguntaAleatoria.pregunta
+      document.querySelector("#pregunta").innerHTML = preguntaAleatoria.pregunta
 
-     document.querySelector("#respuesta1").innerHTML = preguntaAleatoria.posiblesRespuestas[0]
-     document.querySelector("#respuesta2").innerHTML = preguntaAleatoria.posiblesRespuestas[1]
-     document.querySelector("#respuesta3").innerHTML = preguntaAleatoria.posiblesRespuestas[2]
-     document.querySelector("#respuesta4").innerHTML = preguntaAleatoria.posiblesRespuestas[3]           
+      document.querySelector("#respuesta1").innerHTML = preguntaAleatoria.posiblesRespuestas[0]
+      document.querySelector("#respuesta2").innerHTML = preguntaAleatoria.posiblesRespuestas[1]
+      document.querySelector("#respuesta3").innerHTML = preguntaAleatoria.posiblesRespuestas[2]
+      document.querySelector("#respuesta4").innerHTML = preguntaAleatoria.posiblesRespuestas[3]           
         
-     document.querySelector("#respuesta1").addEventListener("click", function(){
-        console.clear();
-
-            if (preguntaAleatoria.posiblesRespuestas[0] == preguntaAleatoria.respuestaCorrecta){
-                    posicionActual = posicionActual + 1
-   
-                    console.log("Respuesta correcta!!! Nueva posición: ", posicionActual )    
-                   
-                    aciertos = aciertos + 1  
-
-                    posicion = document.querySelector(".div")
-
-                    posicion.classList.add("div-point")
-                    
-                    if (posicionActual == 20) {
-                        console.log("Has llegado a la posición ", posicionActual)
-                        console.log("Aciertos Totales: ", aciertos)
-                        console.log("Errores Totales: ", errores)                     
-                     }
-   
-            }
-            else{
-                posicionActual=posicionActual - 3
-   
-                if(posicionActual<1){
-                    posicionActual=1
-                }
-               
-                errores = errores + 1
-               
-                console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
-
-                posicion = document.querySelector(".div")
-
-                posicion.classList.remove("div-point")
-            }
-   
-            console.log("Aciertos ", aciertos)
-            console.log("Errores ", errores)
-    }),
-   
-   
-    document.querySelector("#respuesta2").addEventListener("click", function(){
-        console.clear();
-   
-            if (preguntaAleatoria.posiblesRespuestas[1] == preguntaAleatoria.respuestaCorrecta){
-   
-                    posicionActual = posicionActual + 1
-   
-                    console.log("Respuesta correcta!!! Nueva posición: ", posicionActual )    
-                   
-                        aciertos = aciertos + 1    
-
-                        posicion = document.querySelector(".div")
-
-                        posicion.classList.add("div-point")
-                        
-                        if (posicionActual == 20) {
-                            console.log("Has llegado a la posición ", posicionActual)
-                            console.log("Aciertos Totales: ", aciertos)
-                            console.log("Errores Totales: ", errores)                     
-                         }
-   
-            }
-            else{
-                posicionActual=posicionActual - 3
-   
-                if(posicionActual<1){
-                    posicionActual=1
-                }
-   
-                errores = errores +1
-               
-                console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual)
-                
-                posicion = document.querySelector(".div")
-
-                posicion.classList.remove("div-point")
-            }
-   
-            console.log("Aciertos ", aciertos)
-            console.log("Errores ", errores)
-    }),
-   
-    document.querySelector("#respuesta3").addEventListener("click", function(){
-        console.clear();
-            if (preguntaAleatoria.posiblesRespuestas[2] == preguntaAleatoria.respuestaCorrecta){
-   
-                    posicionActual = posicionActual + 1
-   
-                    console.log("Respuesta correcta!!! Nueva posición: ", posicionActual )    
-                   
-                    aciertos = aciertos + 1       
-
-                    posicion = document.querySelector(".div")
-
-                    posicion.classList.add("div-point")
-                    
-                    if (posicionActual == 20) {
-                        console.log("Has llegado a la posición ", posicionActual)
-                        console.log("Aciertos Totales: ", aciertos)
-                        console.log("Errores Totales: ", errores)                     
-                     }
-   
-            }
-            else{
-                posicionActual=posicionActual - 3
-   
-                if(posicionActual<1){
-                    posicionActual=1
-                }
-                errores = errores + 1
-               
-                console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
-
-                posicion = document.querySelector(".div")
-
-                posicion.classList.remove("div-point")
-            }
-   
-            console.log("Aciertos ", aciertos)
-            console.log("Errores ", errores)
-    }),
-   
-    document.querySelector("#respuesta4").addEventListener("click", function(){
-        console.clear();
-   
-            if (preguntaAleatoria.posiblesRespuestas[3] == preguntaAleatoria.respuestaCorrecta){
-   
-                    posicionActual = posicionActual + 1
-   
-                    console.log("Respuesta correcta!!! Nueva posición: ", posicionActual )    
-                   
-                    aciertos = aciertos + 1
-
-                    posicion = document.querySelector(".div")
-
-                    posicion.classList.add("div-point")
-
-                    if (posicionActual == 20) {
-                        console.log("Has llegado a la posición ", posicionActual)
-                        console.log("Aciertos Totales: ", aciertos)
-                        console.log("Errores Totales: ", errores)                     
-                     }
-            }
-            else{
-                posicionActual=posicionActual - 3
-   
-                if(posicionActual<1){
-                    posicionActual=1
-                }
-               
-                errores = errores + 1
-               
-                console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
-
-                posicion = document.querySelector(".div")
-
-                posicion.classList.remove("div-point")
-            }
-   
-            console.log("Aciertos ", aciertos)
-            console.log("Errores ", errores)
-        })
-    }
-    )
-    )
-}
-mouJugador()
+     }
+     )

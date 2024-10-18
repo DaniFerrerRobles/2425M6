@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sesion 5</title>
+  <style>
+    #p1{
+      background-color: red;
+    }
+    .alerta{
+      color: red;
+    }
+    .textoGrande{
+      font-size: 50px;
+    }
+    .borde{
+      border: 2px solid;
+    }
+    .cuadrado{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Estilos, clases y atributos del DOM</h1>
+  <p id="p1">COLOR DE FONDO</p>
+  <p id="p2" title="title de párrafo" class="alerta textoGrande">Párrafo con clases</p>
+
+  <div>
+    <div class="cuadrado">1</div>
+    <div class="cuadrado">2</div>
+    <div class="cuadrado">3</div>
+  </div>
+  <input id="input1" type="text" value="ejemplo">
+  <button>mostrar valor del input</button>
+
+  <script>
+    document.querySelector('#p1').style.backgroundColor = "blue"; // modificar estilo (el nombre del estilo debe estar en camelCase)
+    document.querySelector('#p1').style.display = "block"; //ocultar elemento
+
+    //Añadir y quitar clases
+    console.log(document.querySelector('#p2').classList);
+    document.querySelector('#p2').classList.add("borde");
+    document.querySelector('#p2').classList.remove("alerta");
+    
+    //Ver/Añadir y modificar atributos
+    const p2 = document.querySelector('#p2');
+    console.log('title de p2', p2.getAttribute("title"));
+    p2.setAttribute('title', 'title modificado')
+    console.log('nuevo title', p2.getAttribute("title"));
+
+    const cuadrado = document.querySelector('.cuadrado');
+    console.log(cuadrado.innerHTML);
+
+    // Seleccionar todos los elementos
+    const cuadrados = document.querySelectorAll('.cuadrado');
+    console.log('cuadrados', cuadrados);
+    console.log('segundo cuadrado', cuadrados[1].innerHTML);
+    cuadrados[2].classList.add('borde')
+
+    // Acceder y modificar al value de un input
+    const input = document.querySelector('#input1');
+    console.log('value del input: ', input.value);
+    console.log('id del input: ', input.id);
+
+    input.value = "nuevo valor"
+
+    document.querySelector('button').addEventListener('click',function(){
+      const texto = document.querySelector('#input1').value;
+      alert('valor actual del input: ' + texto)
+    });
+
+
+  </script>
+</body>
+</html>
