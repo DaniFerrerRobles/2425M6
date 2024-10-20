@@ -57,15 +57,17 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                  aciertos = aciertos + 1 
 
 
-                document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
                 let resultado = document.querySelector("#resultado");
+
+                resultado.style.display = "block";
 
                 resultado.classList.remove("resultadoIncorrecto");
 
                 resultado.classList.add("resultadoCorrecto");
 
-                 
+                
                  if (posicionActual == 20) {
                     console.log("Has llegado a la posición ", posicionActual)
                     console.log("Aciertos Totales: ", aciertos)
@@ -84,9 +86,11 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual)
 
-             document.querySelector("#resultado").innerHTML = "Respuesta incorrecta!!! Nueva posición: " + posicionActual;
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
               resultado = document.querySelector("#resultado");
+
+              resultado.style.display = "block";
 
               resultado.classList.remove("resultadoCorrecto")
 
@@ -109,9 +113,11 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                      aciertos = aciertos + 1  
                      
-                     document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
+                     document.querySelector("#resultado").innerHTML = "Respuesta correcta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
                       resultado = document.querySelector("#resultado");
+
+                      resultado.style.display = "block";
 
                       resultado.classList.remove("resultadoIncorrecto");
      
@@ -135,9 +141,11 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
 
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!! Nueva posición: " + posicionActual;
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
              resultado = document.querySelector("#resultado");
+
+             resultado.style.display = "block";
 
              resultado.classList.remove("resultadoCorrecto")
 
@@ -160,9 +168,11 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                  aciertos = aciertos + 1    
 
-                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
                   resultado = document.querySelector("#resultado");
+
+                  resultado.style.display = "block";
 
                   resultado.classList.remove("resultadoIncorrecto");
  
@@ -185,9 +195,10 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
 
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!! Nueva posición: " + posicionActual;
-
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
               resultado = document.querySelector("#resultado");
+
+              resultado.style.display = "block";
 
               resultado.classList.remove("resultadoCorrecto")
 
@@ -209,9 +220,11 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
                 
                  aciertos = aciertos + 1
 
-                 document.querySelector("#resultado").innerHTML = "Respuesta correcta!!! Nueva posición: " + posicionActual;
+                 document.querySelector("#resultado").innerHTML = "Respuesta correcta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
                   resultado = document.querySelector("#resultado");
+
+                  resultado.style.display = "block";
 
                   resultado.classList.remove("resultadoIncorrecto");
  
@@ -234,9 +247,12 @@ console.log("Posición actual: ", posicionActual, "Aciertos 1: ", aciertos, "Err
             
              console.log("Respuesta incorrecta!!! Nueva posición:  ", posicionActual) 
 
-             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta!!! Nueva posición: " + posicionActual;
+             document.querySelector("#resultado").innerHTML = "Respuesta Incorrecta, era " + preguntaAleatoria.respuestaCorrecta + "!!! Nueva posición: " + posicionActual;
 
              resultado = document.querySelector("#resultado");
+
+             resultado.style.display = "block";
+
              resultado.classList.remove("resultadoCorrecto")
 
              resultado.classList.add("resultadoIncorrecto");

@@ -49,6 +49,7 @@ document.querySelector("#respuesta1").addEventListener("click", function(){
         console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
         document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         let resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoIncorrecto");
         resultado.classList.add("resultadoCorrecto");
     }
@@ -56,6 +57,7 @@ document.querySelector("#respuesta1").addEventListener("click", function(){
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
         document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoCorrecto")
         resultado.classList.add("resultadoIncorrecto");
     }
@@ -75,6 +77,7 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
         console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
         document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoIncorrecto");
         resultado.classList.add("resultadoCorrecto");
     }
@@ -82,6 +85,7 @@ document.querySelector("#respuesta2").addEventListener("click", function(){
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
         document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoCorrecto")
         resultado.classList.add("resultadoIncorrecto");
     }
@@ -101,6 +105,7 @@ document.querySelector("#respuesta3").addEventListener("click", function(){
         console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
         document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoIncorrecto");
         resultado.classList.add("resultadoCorrecto");
     }
@@ -127,6 +132,7 @@ document.querySelector("#respuesta4").addEventListener("click", function(){
         console.log("CORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)   
         document.querySelector("#result").innerHTML = "CORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoIncorrecto");
         resultado.classList.add("resultadoCorrecto");
     }
@@ -134,6 +140,7 @@ document.querySelector("#respuesta4").addEventListener("click", function(){
         console.log("INCORRECTO!!! La respuesta correcta era ", preguntaAleatoria.respuestaCorrecta)  
         document.querySelector("#result").innerHTML = "INCORRECTO!!! La respuesta correcta era " + preguntaAleatoria.respuestaCorrecta
         resultado = document.querySelector("#result")
+        resultado.style.display = "block";
         resultado.classList.remove("resultadoCorrecto")
         resultado.classList.add("resultadoIncorrecto");
     }
