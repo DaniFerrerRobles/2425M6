@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .resaltado {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }        
+    </style>
+
+
+</head>
+<body>
+
+    <div class="row mt-5 bg-light p-5">
+        <h2>Ejercicio 2 - String</h2>
+        <div class="col-12 mt-3 border p-5">
+        <div class="mb-3">
+            <label for="texto" class="form-label">Texto a analizar</label>
+            <textarea class="form-control mb-2" id="texto" rows="3" placeholder="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil voluptas aut necessitatibus placeat inventore fuga. Quisquam distinctio animi doloremque hic dignissimos quo id illum facere. Architecto quidem aliquam deserunt voluptates?"></textarea>
+            <button class="btn btn-warning mb-2" id="convertirMayusculas">Convertir a Mayusculas</button>
+            <button class="btn btn-danger mb-2" id="convertirMinusculas">Convertir a Minúsculas</button>
+            <button class="btn btn-danger mb-2" id="btnMostrar">Mostrar texto</button>
+
+
+            <p id="pablabrasTotales">El texto contiene <strong>25</strong> palabras</p>
+        </div>
+        <h4>Buscador</h4>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">🔍</span>
+            <input type="text" class="form-control" id="palabraParaBuscar" placeholder="lorem" aria-label="Username" aria-describedby="basic-addon1">
+            <button class="btn btn-success ms-3" id="btnBuscar">Buscar</button>
+        </div>
+        <div class="border p-2" id="frase"><span class="bg-primary text-light">lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. Nihil voluptas aut necessitatibus placeat inventore fuga. Quisquam distinctio animi doloremque hic dignissimos quo id illum facere. Architecto quidem aliquam deserunt voluptates?</div>
+        <p id="fraseCoincidencias">He encontrado <strong>1</strong> coincidencias</p>
+
+        
+        <h4>Resumen de 10 caracteres</h4>
+        <div id="resumen" class="border mt-2 p-2">lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil voluptas  ...</div>
+        </div>
+    </div>    
+
+    <script src="index.js"></script>
+</body>
+</html>
