@@ -17,7 +17,7 @@ session_start();
         <h3>Bienvenido <?php echo $_SESSION['username']; ?></h3>
     </header>
     <div class="card p-4" style="width: 22rem;">
-        <h2 class="card-title text-center">Habitación 1</h2>
+        <h2 class="card-title text-center">Habitación 3</h2>
 
         <form method="POST">
             <div class="mb-3">
@@ -36,6 +36,9 @@ session_start();
 
 <?php
 
+include 'room1.php';
+
+
 if (isset($_POST['username']) && isset($_POST['dificultat'])) {
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['dificultat'] = $_POST['dificultat'];
@@ -44,16 +47,16 @@ if (isset($_POST['username']) && isset($_POST['dificultat'])) {
 include 'arrayDificultad.php';
 
 if ($_SESSION['dificultat'] == 'facil') {
-    $pregunta = $preguntas['facil'][0]['pregunta'];
-    $respuesta = $preguntas['facil'][0]['resposta'];
+    $pregunta = $preguntas['facil'][2]['pregunta'];
+    $respuesta = $preguntas['facil'][2]['resposta'];
 
 } elseif ($_SESSION['dificultat'] == 'mig') {
-    $pregunta = $preguntas['mig'][0]['pregunta'];
-    $respuesta = $preguntas['mig'][0]['resposta'];
+    $pregunta = $preguntas['mig'][2]['pregunta'];
+    $respuesta = $preguntas['mig'][2]['resposta'];
 
 } elseif ($_SESSION['dificultat'] == 'dificil') {
-    $pregunta = $preguntas['dificil'][0]['pregunta'];
-    $respuesta = $preguntas['dificil'][0]['resposta'];
+    $pregunta = $preguntas['dificil'][2]['pregunta'];
+    $respuesta = $preguntas['dificil'][2]['resposta'][2];
 }
 
 

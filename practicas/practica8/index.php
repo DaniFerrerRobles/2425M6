@@ -16,7 +16,7 @@
             </div>
             <div class="mb-3">
                 <label for="dificultat" class="form-label">Nivell de Dificultat:</label>
-                <select name="" id="dificultat" class="form-select" required>
+                <select name="dificultat" id="dificultat" class="form-select" required>
                     <option value="">Selecciona un nivell</option>
                     <option value="facil">Fàcil</option>
                     <option value="mig">Mig</option>
