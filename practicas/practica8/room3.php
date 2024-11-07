@@ -2,6 +2,33 @@
 
 session_start();
 
+include 'arrayDificultad.php';
+
+if ($_SESSION['dificultat'] == 'facil') {
+    $pregunta = $preguntas['facil'][2]['pregunta'];
+    $respuesta = $preguntas['facil'][2]['resposta'];
+
+} elseif ($_SESSION['dificultat'] == 'mig') {
+    $pregunta = $preguntas['mig'][2]['pregunta'];
+    $respuesta = $preguntas['mig'][2]['resposta'];
+
+} elseif ($_SESSION['dificultat'] == 'dificil') {
+    $pregunta = $preguntas['dificil'][2]['pregunta'];
+    $respuesta = $preguntas['dificil'][2]['resposta'][2];
+}
+
+
+if(isset($_POST['answer'])) {
+    if($_POST['answer'] == $respuesta){
+        $message = "BIEN, HAS COMPLETADO EL JUEFO, FELICIDADES!!!";
+
+    }else{
+        $message = "MAL";
+
+        echo '<a href="room3.php" class="btn btn-danger w-100">PRUEBA DE NUEVO</a>';
+
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +42,8 @@ session_start();
 <body class="d-flex justify-content-center align-items-center vh-100">
     <header>
         <h3>Bienvenido <?php echo $_SESSION['username']; ?></h3>
+        <img src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-
+wearing-suit-with-red-tie-png-image_5809521.png" alt="img">
     </header>
     <div class="card p-4" style="width: 22rem;">
         <h2 class="card-title text-center">Habitación 3</h2>
@@ -33,41 +62,3 @@ session_start();
     </div>
 </body>
 </html>
-
-<?php
-
-include 'room1.php';
-
-
-if (isset($_POST['username']) && isset($_POST['dificultat'])) {
-    $_SESSION['username'] = $_POST['username'];
-    $_SESSION['dificultat'] = $_POST['dificultat'];
-}
-
-include 'arrayDificultad.php';
-
-if ($_SESSION['dificultat'] == 'facil') {
-    $pregunta = $preguntas['facil'][2]['pregunta'];
-    $respuesta = $preguntas['facil'][2]['resposta'];
-
-} elseif ($_SESSION['dificultat'] == 'mig') {
-    $pregunta = $preguntas['mig'][2]['pregunta'];
-    $respuesta = $preguntas['mig'][2]['resposta'];
-
-} elseif ($_SESSION['dificultat'] == 'dificil') {
-    $pregunta = $preguntas['dificil'][2]['pregunta'];
-    $respuesta = $preguntas['dificil'][2]['resposta'][2];
-}
-
-
-    if ($_POST['answer'] == $respuesta) {
-        $message = "BIEN";
-
-        // header("Location: room2.php");
-        exit;
-    } else {
-        $message = "MAL";
-
-        // header("Location: room1.php");
-    }
-?>
