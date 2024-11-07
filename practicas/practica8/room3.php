@@ -14,18 +14,22 @@ if ($_SESSION['dificultat'] == 'facil') {
 
 } elseif ($_SESSION['dificultat'] == 'dificil') {
     $pregunta = $preguntas['dificil'][2]['pregunta'];
-    $respuesta = $preguntas['dificil'][2]['resposta'][2];
+    $respuesta = $preguntas['dificil'][2]['resposta'];
 }
 
 
 if(isset($_POST['answer'])) {
     if($_POST['answer'] == $respuesta){
-        $message = "BIEN, HAS COMPLETADO EL JUEFO, FELICIDADES!!!";
+        $message = "BIEN, HAS COMPLETADO EL JUEGO, FELICIDADES!!!";
+
+        echo ' <a href="index.php" class="btn btn-dark w-10">VUELVE AL PRINCIPIO</a>';
+
+        session_destroy();
 
     }else{
         $message = "MAL";
 
-        echo '<a href="room3.php" class="btn btn-danger w-100">PRUEBA DE NUEVO</a>';
+        echo '<a href="room3.php" class="btn btn-danger w-10">PRUEBA DE NUEVO</a>';
 
     }
 }
@@ -58,6 +62,7 @@ wearing-suit-with-red-tie-png-image_5809521.png" alt="img">
 
         <div class="mt-3 text-center">
             <h4><?php echo $message; ?></h4>
+            
         </div>
     </div>
 </body>

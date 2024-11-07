@@ -13,7 +13,6 @@ include 'arrayDificultad.php';
 if ($_SESSION['dificultat'] == 'facil') {
     $pregunta = $preguntas['facil'][0]['pregunta'];
     $respuesta = $preguntas['facil'][0]['resposta'];
-    var_dump($respuesta);
 
 } elseif ($_SESSION['dificultat'] == 'mig') {
     $pregunta = $preguntas['mig'][0]['pregunta'];

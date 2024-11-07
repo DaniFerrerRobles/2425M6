@@ -26,7 +26,7 @@ if(isset($_POST['answer'])) {
     }else{
         $message = "MAL";
 
-        echo '<a href="room2.php" class="btn btn-danger w-100">PRUEBA DE NUEVO</a>';
+        echo '<a href="room2.php" class="btn btn-danger w-10">PRUEBA DE NUEVO</a>';
 
     }
 }
